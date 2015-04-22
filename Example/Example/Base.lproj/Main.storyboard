@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1KN-nw-IJL" userLabel="Emo" customClass="EmoView" customModule="Emo">
+                                <rect key="frame" x="0.0" y="300" width="600" height="300"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="uAH-oX-m0J"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s2H-U8-kpJ" userLabel="Main Container" customClass="UIControl">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piU-Tg-gZ3">
+                                        <rect key="frame" x="8" y="562" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="DcW-oZ-Qpz"/>
+                                        </constraints>
+                                        <state key="normal" title="Toggle">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didClickToggleButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CJD-gc-zOh"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vre-PR-Kxo" userLabel="Comment Edit">
+                                        <rect key="frame" x="62" y="562" width="530" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="piU-Tg-gZ3" secondAttribute="bottom" constant="8" id="RYt-xe-ZaD"/>
+                                    <constraint firstAttribute="trailing" secondItem="vre-PR-Kxo" secondAttribute="trailing" constant="8" id="dE7-u1-azV"/>
+                                    <constraint firstItem="piU-Tg-gZ3" firstAttribute="leading" secondItem="s2H-U8-kpJ" secondAttribute="leading" constant="8" id="dwM-bC-OAm"/>
+                                    <constraint firstItem="vre-PR-Kxo" firstAttribute="leading" secondItem="piU-Tg-gZ3" secondAttribute="trailing" constant="8" id="jdH-B7-nKJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="vre-PR-Kxo" secondAttribute="bottom" constant="8" id="sfv-sb-lfk"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="didTouchBackground:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5KK-e8-GBF"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="s2H-U8-kpJ" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="899-P5-IVm"/>
+                            <constraint firstAttribute="width" secondItem="1KN-nw-IJL" secondAttribute="width" id="Iwx-wu-tZs"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="1KN-nw-IJL" secondAttribute="bottom" id="Tqg-Z6-mdg"/>
+                            <constraint firstItem="s2H-U8-kpJ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-20" id="aXn-GE-PGd"/>
+                            <constraint firstAttribute="centerX" secondItem="1KN-nw-IJL" secondAttribute="centerX" id="c1a-wA-GKQ"/>
+                            <constraint firstAttribute="centerX" secondItem="s2H-U8-kpJ" secondAttribute="centerX" id="eFy-WN-lmR"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="s2H-U8-kpJ" secondAttribute="bottom" id="mG1-Uk-kDG"/>
+                        </constraints>
+                        <connections>
+                            <action selector="didTouchBackground:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WH6-bC-vkP"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="commentField" destination="vre-PR-Kxo" id="9wD-pj-Sjq"/>
+                        <outlet property="emoView" destination="1KN-nw-IJL" id="Yrw-5g-xjn"/>
+                        <outlet property="mainContainerBottomSpacing" destination="mG1-Uk-kDG" id="kl3-4b-g86"/>
+                        <outlet property="toggleButton" destination="piU-Tg-gZ3" id="p9K-CK-I9D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+    </scenes>
+</document>

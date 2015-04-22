@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmoView" customModule="Emo" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomBorder" destination="nfb-i3-wzk" id="j3D-m2-PNO"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="iVG-iY-dxy"/>
+                <outlet property="emojiCollectionPager" destination="7kb-yY-xML" id="EDG-OO-sUe"/>
+                <outlet property="emojiCollectionView" destination="voc-jw-htw" id="bLN-Wv-lf0"/>
+                <outlet property="emojiPackCollectionView" destination="jBi-eb-pIw" id="fno-fn-9GG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="Content View">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="jBi-eb-pIw" userLabel="Emoji Pack Collection">
+                    <rect key="frame" x="0.0" y="558" width="600" height="42"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="HlL-jv-pqK"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="XkM-tu-zQV">
+                        <size key="itemSize" width="53" height="42"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="7kb-yY-xML">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="35"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="lFv-rY-DUY"/>
+                    </constraints>
+                    <color key="pageIndicatorTintColor" red="0.76470588235294112" green="0.76470588235294112" blue="0.76470588235294112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="currentPageIndicatorTintColor" red="0.95294117647058818" green="0.57647058823529407" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <action selector="pageChanged:" destination="-1" eventType="valueChanged" id="Nco-6C-7qr"/>
+                    </connections>
+                </pageControl>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="voc-jw-htw" userLabel="Emoji Collection">
+                    <rect key="frame" x="0.0" y="35" width="600" height="523"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewLayout key="collectionViewLayout" id="cme-Rw-aMb" customClass="EmojiCollectionViewDiscreteLayout" customModule="Emo" customModuleProvider="target"/>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfb-i3-wzk" userLabel="Bottom Border">
+                    <rect key="frame" x="0.0" y="557" width="600" height="1"/>
+                    <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Bsf-gE-eHc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="nfb-i3-wzk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="49T-MC-v8l"/>
+                <constraint firstAttribute="trailing" secondItem="nfb-i3-wzk" secondAttribute="trailing" id="5QH-xF-bFR"/>
+                <constraint firstItem="jBi-eb-pIw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="7hH-iq-bls"/>
+                <constraint firstItem="7kb-yY-xML" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9V3-FX-ZMk"/>
+                <constraint firstItem="jBi-eb-pIw" firstAttribute="top" secondItem="nfb-i3-wzk" secondAttribute="bottom" id="HR3-go-TK5"/>
+                <constraint firstAttribute="trailing" secondItem="7kb-yY-xML" secondAttribute="trailing" id="LbB-yV-evS"/>
+                <constraint firstAttribute="trailing" secondItem="jBi-eb-pIw" secondAttribute="trailing" id="Ucz-mx-Su5"/>
+                <constraint firstAttribute="bottom" secondItem="jBi-eb-pIw" secondAttribute="bottom" id="VN4-XY-g1j"/>
+                <constraint firstItem="voc-jw-htw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XAL-tY-0Qq"/>
+                <constraint firstItem="7kb-yY-xML" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="a6y-h1-HDh"/>
+                <constraint firstItem="voc-jw-htw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="35" id="rcf-i4-ALV"/>
+                <constraint firstItem="jBi-eb-pIw" firstAttribute="top" secondItem="voc-jw-htw" secondAttribute="bottom" id="san-1o-YRx"/>
+                <constraint firstAttribute="trailing" secondItem="voc-jw-htw" secondAttribute="trailing" id="w6p-Hr-eeE"/>
+            </constraints>
+            <point key="canvasLocation" x="490" y="506"/>
+        </view>
+    </objects>
+</document>

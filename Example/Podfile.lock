@@ -1,0 +1,14 @@
+PODS:
+  - Emo (0.1.0)
+
+DEPENDENCIES:
+  - Emo (from `..`)
+
+EXTERNAL SOURCES:
+  Emo:
+    :path: ".."
+
+SPEC CHECKSUMS:
+  Emo: a2fbe6a2737f6b47333657311262bbab8b8a3a69
+
+COCOAPODS: 0.37.0.beta.1
